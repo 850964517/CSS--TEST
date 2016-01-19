@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vertical-align和line-height的区别</title>
+	<style>
+     /*
+       vertical-align是垂直对齐的意思,支持很多属性, 
+       vertical-align有一个基线,所有的位置都是基于这个设置的,
+       在使用vertical-align时候需要设置其身的元素display:inline或者inline-block;
+       (table-cell也可以理解为inline-block水平)
+
+     	所谓inline-block水平的元素既可以与inline水平元素混排，又能设置高宽属性的元素。哪些元素呢，例如图片，按钮，单复选框，单行/多行文本框等HTML控件，只有这些元素默认情况下会对vertical-align属性起作用。
+     */
+     .test{
+     	 /*关键字值*/
+     	/*vertical-align: baseline;
+     	vertical-align: sub;
+     	vertical-align: super;
+     	vertical-align: text-top;
+     	vertical-align: text-bottom;
+     	vertical-align:middle;
+     	vertical-align: top;*/
+     	/*display:inline-block;*/
+     	width: 200px;
+     	height: 100px;
+     	border:1px solid red;
+     	/*vertical-align: 10em; /*让文字在上面显示在底部*/
+     	color: #333;
+     	/*line-height: 60px;*/
+     	vertical-align: middle;
+
+     	/*vertical-align的默认属性是baseline就是以基线对齐*/
+
+     
+     	/*长度值
+        vertical-align:10em;
+     	vertical-align: 4px;
+     	*/
+
+     	/*百分比*/
+     	/*vertical-align: 10%;*/
+     	/*在vertical-align的百分比值不是相对于字体大小或者是其他属性计算的,而是相对于行高(line-height)来计算的*/
+
+     	/*相当于: */
+     	/*vertical-align:6px; (等于行高的*10%=60*10%)*/
+     }
+     .test_input{
+     	width: 150px;
+     	height: 25px;
+     	vertical-align: ;
+     	/*color:#333;*/
+     }
+	</style>
+</head>
+<body>
+  <div class="test">
+      vertical-align练习
+  </div>
+  <input type="text" class="test_input" placeholder="请输入文字"> 
+	
+</body>
+</html>
